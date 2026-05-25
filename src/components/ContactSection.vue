@@ -153,7 +153,15 @@ export default {
           body: JSON.stringify(form)
         })
 
-        const result = await response.json()
+        const contentType = response.headers.get('content-type')
+        let result = {}
+        if (contentType && contentType.includes('application/json')) {
+          result = await response.json()
+        } else {
+          const text = await response.text()
+          console.error('Non-JSON response:', text)
+          throw new Error(`Server returned non-JSON response (${response.status}). This usually means the API route is missing or misconfigured.`)
+        }
 
         if (response.ok) {
           // Reset form
