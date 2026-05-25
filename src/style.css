@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* ===================================================
    LALIBELA SOUL TOURS — Modern Glass UI Style
    Light theme with glassmorphism effects
