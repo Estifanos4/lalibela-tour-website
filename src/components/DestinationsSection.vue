@@ -32,6 +32,7 @@
 
 <script>
 import { ref, onMounted } from 'vue'
+import lalibelaMainImg from '../assets/lalibela-main.png'
 
 export default {
   name: 'DestinationsSection',
@@ -42,7 +43,7 @@ export default {
       {
         name: 'Lalibela churches',
         description: 'The 8th Wonder of the World — 11 monolithic churches carved from living rock in the 12th century',
-        image: '/src/assets/lalibela-main.png',
+        image: lalibelaMainImg,
         size: 'dest-large'
       },
       {

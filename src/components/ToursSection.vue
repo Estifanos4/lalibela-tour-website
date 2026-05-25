@@ -39,6 +39,7 @@
 
 <script>
 import { ref, onMounted } from 'vue'
+import lalibelaCityTourImg from '../assets/lalibela-city-tour.png'
 
 export default {
   name: 'ToursSection',
@@ -54,7 +55,7 @@ export default {
         difficulty: 'Easy–Moderate',
         durationIcon: 'far fa-clock',
         difficultyIcon: 'fas fa-person-hiking',
-        image: '/src/assets/lalibela-city-tour.png',
+        image: lalibelaCityTourImg,
         badge: 'Most Popular',
         badgeClass: 'badge-popular'
       },

@@ -35,6 +35,7 @@
 
 <script>
 import { ref, onMounted } from 'vue'
+import lalibelaMainImg from '../assets/lalibela-main.png'
 
 export default {
   name: 'GallerySection',
@@ -44,7 +45,7 @@ export default {
     
     const galleryImages = [
       {
-        src: '/src/assets/lalibela-main.png',
+        src: lalibelaMainImg,
         alt: 'Lalibela churches',
         size: ''
       },

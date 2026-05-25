@@ -2,7 +2,7 @@
   <section id="home" class="hero">
     <div class="hero-background">
       <img 
-        src="/src/assets/Lalibela-hero.jpg" 
+        :src="heroImage" 
         alt="Lalibela rock-hewn churches" 
         class="hero-image"
       />
@@ -43,8 +43,15 @@
 </template>
 
 <script>
+import heroImage from '../assets/Lalibela-hero.jpg'
+
 export default {
   name: 'HeroSection',
+  setup() {
+    return {
+      heroImage
+    }
+  },
   methods: {
     scrollToSection(sectionId) {
       const element = document.getElementById(sectionId)
