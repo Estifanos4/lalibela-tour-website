@@ -70,16 +70,6 @@
                   required 
                 />
               </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  v-model="form.phone" 
-                  placeholder="+1 (555) 000-0000" 
-                  required 
-                />
-              </div>
             </div>
             <div class="form-row">
               <div class="form-group">
@@ -103,6 +93,18 @@
                   <option>Sunset Viewpoint Tour</option>
                   <option>Custom / Multi-Day</option>
                 </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  v-model="form.phone" 
+                  placeholder="+1 (555) 000-0000" 
+                  required 
+                />
               </div>
             </div>
             <div class="form-group">
@@ -384,6 +386,11 @@ export default {
   -webkit-backdrop-filter: blur(10px);
   transition: var(--transition);
   outline: none;
+}
+
+.form-group select option {
+  background-color: #1f2937; /* var(--gray-800) equivalent */
+  color: white;
 }
 
 .form-group input::placeholder,
