@@ -70,6 +70,16 @@
                   required 
                 />
               </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  v-model="form.phone" 
+                  placeholder="+1 (555) 000-0000" 
+                  required 
+                />
+              </div>
             </div>
             <div class="form-row">
               <div class="form-group">
@@ -113,21 +123,35 @@
         </div>
       </div>
     </div>
+
+    <!-- Success Modal -->
+    <SuccessModal 
+      :is-visible="isModalVisible" 
+      title="Booking Sent!"
+      message="Thank you! Your booking request has been sent to me via Telegram. I'll get back to you within 24 hours."
+      @close="isModalVisible = false"
+    />
   </section>
 </template>
 
 <script>
 import { ref, reactive, onMounted } from 'vue'
+import SuccessModal from './SuccessModal.vue'
 
 export default {
   name: 'ContactSection',
+  components: {
+    SuccessModal
+  },
   setup() {
     const isVisible = ref(false)
     const isSubmitting = ref(false)
+    const isModalVisible = ref(false)
     
     const form = reactive({
       name: '',
       email: '',
+      phone: '',
       country: '',
       tour: '',
       message: ''
@@ -168,8 +192,8 @@ export default {
           Object.keys(form).forEach(key => {
             form[key] = ''
           })
-          // Show success message
-          alert('Thank you! Your booking request has been sent to me via Telegram. I\'ll get back to you within 24 hours.')
+          // Show success modal
+          isModalVisible.value = true
         } else {
           throw new Error(result.error || 'Failed to send message')
         }

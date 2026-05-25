@@ -4,7 +4,7 @@ export default async function handler(req, res) {
       return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { name, email, country, tour, message } = req.body || {};
+    const { name, email, phone, country, tour, message } = req.body || {};
 
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -21,6 +21,7 @@ export default async function handler(req, res) {
 
 👤 *Name:* ${name || 'N/A'}
 📧 *Email:* ${email || 'N/A'}
+📞 *Phone:* ${phone || 'N/A'}
 🌍 *Country:* ${country || 'Not specified'}
 🚩 *Tour:* ${tour || 'Not specified'}
 
