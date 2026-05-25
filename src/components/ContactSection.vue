@@ -144,16 +144,33 @@ export default {
     const submitForm = async () => {
       isSubmitting.value = true
       
-      // Simulate form submission
-      setTimeout(() => {
-        isSubmitting.value = false
-        // Reset form
-        Object.keys(form).forEach(key => {
-          form[key] = ''
+      try {
+        const response = await fetch('/api/send-booking', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(form)
         })
-        // Show success message (you can implement a toast notification here)
-        alert('Thank you! Your booking request has been sent. I\'ll get back to you within 24 hours.')
-      }, 1500)
+
+        const result = await response.json()
+
+        if (response.ok) {
+          // Reset form
+          Object.keys(form).forEach(key => {
+            form[key] = ''
+          })
+          // Show success message
+          alert('Thank you! Your booking request has been sent to me via Telegram. I\'ll get back to you within 24 hours.')
+        } else {
+          throw new Error(result.error || 'Failed to send message')
+        }
+      } catch (error) {
+        console.error('Booking error:', error)
+        alert('Sorry, there was an error sending your request. Please try again or contact me directly via WhatsApp/Telegram.')
+      } finally {
+        isSubmitting.value = false
+      }
     }
 
     onMounted(() => {
