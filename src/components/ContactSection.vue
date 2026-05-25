@@ -167,7 +167,7 @@ export default {
         }
       } catch (error) {
         console.error('Booking error:', error)
-        alert('Sorry, there was an error sending your request. Please try again or contact me directly via WhatsApp/Telegram.')
+        alert(`Booking Error: ${error.message}\n\nPlease try again or contact me directly via WhatsApp/Telegram.`)
       } finally {
         isSubmitting.value = false
       }
