@@ -38,9 +38,9 @@ export default {
 <style scoped>
 .toast {
   position: fixed;
-  bottom: 6rem;
+  top: 2.5rem;
   right: 2rem;
-  background: rgba(16, 185, 129, 0.9);
+  background: rgba(16, 185, 129, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(16, 185, 129, 0.3);
@@ -52,7 +52,7 @@ export default {
   align-items: center;
   gap: 0.75rem;
   box-shadow: var(--shadow-lg);
-  z-index: 9000;
+  z-index: 9999;
   animation: slideInRight 0.3s ease;
 }
 
@@ -76,7 +76,8 @@ export default {
   .toast {
     right: 1rem;
     left: 1rem;
-    bottom: 5rem;
+    top: 1rem;
+    bottom: auto;
   }
 }
 </style>

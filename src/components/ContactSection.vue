@@ -196,6 +196,10 @@ export default {
           })
           // Show success modal
           isModalVisible.value = true
+          // Show Toast notification
+          if (typeof window !== 'undefined' && window.showToast) {
+            window.showToast('Booking request sent successfully!')
+          }
         } else {
           throw new Error(result.error || 'Failed to send message')
         }
