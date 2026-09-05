@@ -36,6 +36,12 @@
 <script>
 import { ref, onMounted } from 'vue'
 import lalibelaMainImg from '../assets/lalibela-main.png'
+import estifanosImg from '../assets/estifanos.jpg'
+import coffeeCeremonyImg from '../assets/tours/coffee-ceremony.jpg'
+import ashetenHikeImg from '../assets/tours/asheten-hike.jpg'
+import lalibelaSunsetImg from '../assets/tours/lalibela-sunset.jpg'
+import yemrehannaImg from '../assets/tours/yemrehanna-kristos.jpg'
+import lalibelaVillageImg from '../assets/tours/lalibela-village.jpg'
 
 export default {
   name: 'GallerySection',
@@ -46,37 +52,37 @@ export default {
     const galleryImages = [
       {
         src: lalibelaMainImg,
-        alt: 'Lalibela churches',
+        alt: 'Bete Giyorgis Lalibela',
         size: ''
       },
       {
-        src: 'https://images.unsplash.com/photo-1624395213043-fa2e123b2656?w=500&q=80',
-        alt: 'Ethiopian guide',
+        src: estifanosImg,
+        alt: 'Estifanos Mesganaw - Certified Local Guide',
         size: 'gallery-tall'
       },
       {
-        src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=700&q=80',
-        alt: 'Coffee ceremony',
+        src: coffeeCeremonyImg,
+        alt: 'Traditional Ethiopian Coffee Ceremony',
         size: ''
       },
       {
-        src: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=700&q=80',
-        alt: 'Mountain hike',
+        src: ashetenHikeImg,
+        alt: 'Asheten Maryam Mountain Hike',
         size: ''
       },
       {
-        src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1000&q=80',
-        alt: 'Mountain panorama',
+        src: lalibelaSunsetImg,
+        alt: 'Lalibela Mountain Sunset Panorama',
         size: 'gallery-wide'
       },
       {
-        src: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80',
-        alt: 'Yemrehanna cave',
+        src: yemrehannaImg,
+        alt: 'Yemrehanna Kristos Cave Church',
         size: ''
       },
       {
-        src: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=700&q=80',
-        alt: 'Village life',
+        src: lalibelaVillageImg,
+        alt: 'Traditional Highland Village & Tukuls',
         size: ''
       }
     ]

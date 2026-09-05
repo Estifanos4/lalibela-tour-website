@@ -57,15 +57,19 @@
             </p>
             <p>
               <i class="fas fa-phone"></i>
-              +251 900 000 000
+              <a href="tel:+251945141773" class="footer-contact-link">+251 945141773</a>
             </p>
             <p>
               <i class="fas fa-envelope"></i>
-              hello@lalibelasoul.com
+              <a href="mailto:estifanosmesganaw@gmail.com" class="footer-contact-link">estifanosmesganaw@gmail.com</a>
             </p>
             <p>
               <i class="fab fa-whatsapp"></i>
-              WhatsApp Available
+              <a href="https://wa.me/251945141773" target="_blank" rel="noopener noreferrer" class="footer-contact-link">WhatsApp: +251 945141773</a>
+            </p>
+            <p>
+              <i class="fab fa-telegram"></i>
+              <a href="https://t.me/Estifanos4" target="_blank" rel="noopener noreferrer" class="footer-contact-link">Telegram: @Estifanos4</a>
             </p>
           </div>
         </div>
@@ -217,6 +221,17 @@ export default {
   margin-top: 0.125rem;
   flex-shrink: 0;
   width: 1rem;
+}
+
+.footer-contact-link {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.footer-contact-link:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
 }
 
 .footer-bottom {

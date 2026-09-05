@@ -8,25 +8,25 @@
           <p class="contact-description">Ready to explore Lalibela? Fill in the form and I'll get back to you within 24 hours with a custom itinerary.</p>
 
           <div class="contact-channels">
-            <a href="https://wa.me/251900000000" class="contact-channel glass-card" target="_blank">
+            <a href="https://wa.me/251945141773" class="contact-channel glass-card" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-whatsapp"></i>
               <div>
                 <strong>WhatsApp</strong>
-                <span>Fastest response</span>
+                <span>+251 945141773</span>
               </div>
             </a>
-            <a href="https://t.me/lalibelasoul" class="contact-channel glass-card" target="_blank">
+            <a href="https://t.me/Estifanos4" class="contact-channel glass-card" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-telegram"></i>
               <div>
                 <strong>Telegram</strong>
-                <span>@lalibelasoul</span>
+                <span>@Estifanos4</span>
               </div>
             </a>
-            <a href="mailto:hello@lalibelasoul.com" class="contact-channel glass-card">
+            <a href="mailto:estifanosmesganaw@gmail.com" class="contact-channel glass-card">
               <i class="fas fa-envelope"></i>
               <div>
                 <strong>Email</strong>
-                <span>hello@lalibelasoul.com</span>
+                <span>estifanosmesganaw@gmail.com</span>
               </div>
             </a>
           </div>

@@ -33,6 +33,10 @@
 <script>
 import { ref, onMounted } from 'vue'
 import lalibelaMainImg from '../assets/lalibela-main.png'
+import yemrehannaImg from '../assets/tours/yemrehanna-kristos.jpg'
+import ashetenHikeImg from '../assets/tours/asheten-hike.jpg'
+import lalibelaSunsetImg from '../assets/tours/lalibela-sunset.jpg'
+import lalibelaVillageImg from '../assets/tours/lalibela-village.jpg'
 
 export default {
   name: 'DestinationsSection',
@@ -41,39 +45,33 @@ export default {
     
     const destinations = [
       {
-        name: 'Lalibela churches',
+        name: 'Lalibela Rock-Hewn Churches',
         description: 'The 8th Wonder of the World — 11 monolithic churches carved from living rock in the 12th century',
         image: lalibelaMainImg,
         size: 'dest-large'
       },
       {
         name: 'Yemrehanna Kristos',
-        description: 'Ancient cave church, predating even Lalibela',
-        image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80',
+        description: 'Ancient Aksumite cave church built inside a basalt cavern',
+        image: yemrehannaImg,
         size: ''
       },
       {
         name: 'Asheten Monastery',
-        description: 'Perched at 3,150m above sea level',
-        image: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80',
-        size: ''
-      },
-      {
-        name: 'Bilbala St. George',
-        description: 'Remote hilltop church with panoramic views',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+        description: 'High-altitude sanctuary perched at 3,150m above sea level',
+        image: ashetenHikeImg,
         size: ''
       },
       {
         name: 'Mountain Viewpoints',
-        description: 'Sweeping views of the Ethiopian highlands',
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+        description: 'Sweeping sunset panoramas over the jagged Ethiopian highlands',
+        image: lalibelaSunsetImg,
         size: ''
       },
       {
-        name: 'Traditional Villages',
-        description: 'Real highland life, unchanged for centuries',
-        image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=800&q=80',
+        name: 'Traditional Highland Villages',
+        description: 'Real highland life and round stone tukuls, unchanged for centuries',
+        image: lalibelaVillageImg,
         size: ''
       }
     ]

@@ -5,8 +5,8 @@
         <div class="about-image-col slide-in-left" :class="{ 'visible': isVisible }">
           <div class="about-img-frame">
             <img 
-              src="https://images.unsplash.com/photo-1624395213043-fa2e123b2656?w=700&q=80" 
-              alt="Local guide in Lalibela" 
+              :src="estifanosImg" 
+              alt="Estifanos Mesganaw - Certified Lalibela Local Guide" 
             />
             <div class="about-img-badge glass-card">
               <i class="fas fa-award"></i>
@@ -41,6 +41,15 @@
               Adventurous
             </div>
           </div>
+
+          <div class="about-contact-actions">
+            <a href="https://wa.me/251945141773" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="https://t.me/Estifanos4" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-telegram">
+              <i class="fab fa-telegram"></i> Telegram @Estifanos4
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -49,6 +58,7 @@
 
 <script>
 import { ref, onMounted } from 'vue'
+import estifanosImg from '../assets/estifanos.jpg'
 
 export default {
   name: 'AboutSection',
@@ -75,7 +85,8 @@ export default {
     })
 
     return {
-      isVisible
+      isVisible,
+      estifanosImg
     }
   }
 }
@@ -176,6 +187,51 @@ export default {
 
 .value-chip i {
   color: var(--primary-light);
+}
+
+.about-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-full);
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background: #1eb956;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-telegram {
+  background: #26A5E4;
+  color: #ffffff !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-full);
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(38, 165, 228, 0.25);
+}
+
+.btn-telegram:hover {
+  background: #1b8ecc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(38, 165, 228, 0.4);
 }
 
 @media (max-width: 768px) {
